@@ -15,10 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [mahasiswaController::class,'home']);
-Route::get('/insert', [mahasiswaController::class,'insert']);
+Route::get('/insert', [mahasiswaController::class,'form_profil']);
+Route::post('/proses_form_profil',[MahasiswaController::class,'proses_form_profil']);
 Route::get('/delete', [mahasiswaController::class,'delete']);
 Route::get('/sort/nama', [mahasiswaController::class,'sortByNama']);
-Route::get('/sort/ipk', [mahasiswaController::class,'sortByIPK']);
+Route::get('/sort/un', [mahasiswaController::class,'sortByUn']);
 Route::get('/search', [mahasiswaController::class,'search']);
 Route::get('/detail/{id}', [mahasiswaController::class,'detail']);
 Route::get('/hapus/{id}', [mahasiswaController::class,'hapus']);
